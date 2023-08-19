@@ -21,10 +21,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# CORS Allowed
-# Change it to production URL upon deployment
-CORS_ALLOWED_ORIGINS = []
-
 
 # Application definition
 
@@ -52,6 +48,11 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# CORS Allowed
+# Change it to production URL upon deployment
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173",]
+
 
 ROOT_URLCONF = 'backend.urls'
 

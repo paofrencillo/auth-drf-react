@@ -1,15 +1,15 @@
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+
 export default function LoginForm() {
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(e.target.user.value);
-    console.log(e.target.pass.value);
-  }
+  const { loginUser } = useContext(AuthContext);
+
   return (
     <>
       <div>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="user" id="user" />
-          <input type="password" name="pass" id="pass" />
+        <form onSubmit={loginUser}>
+          <input type="text" name="user" id="user" placeholder="Username" />
+          <input type="password" name="pass" id="pass" placeholder="Password" />
           <button type="submit">Submit</button>
         </form>
       </div>

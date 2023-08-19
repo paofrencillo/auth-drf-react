@@ -22,10 +22,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
-# CORS Allowed
-# Change it to production URL upon deployment
-CORS_ALLOWED_ORIGINS = []
-
 # Comment out the following line and place your railway URL, and your production URL in the array.
 # CSRF_TRUSTED_ORIGINS = ["*"]
 
@@ -55,6 +51,10 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# CORS Allowed
+# Change it to production URL upon deployment
+CORS_ALLOWED_ORIGINS = []
 
 ROOT_URLCONF = 'backend.urls'
 
